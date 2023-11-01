@@ -21,4 +21,8 @@ export class HomeComponent {
     this.productList = data;
     console.log(data);
   }
+
+  addItemToCart(id: number) {
+    console.log(id + ' added to the cart');
+  }
 }
