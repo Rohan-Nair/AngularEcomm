@@ -6,9 +6,10 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { SaleComponent } from './pages/sale/sale.component';
+import { ProductComponent } from './pages/product/product.component';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, CartComponent, SaleComponent],
+  declarations: [AppComponent, HomeComponent, CartComponent, SaleComponent, ProductComponent],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],

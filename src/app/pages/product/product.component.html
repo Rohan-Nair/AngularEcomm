@@ -1,0 +1,52 @@
+<div class="bg-transparent rounded-md w-[98%] max-w-[96rem] mx-auto d-flex flex-wrap justify-content-around gap-4">
+    <!-- <div class=" relative isolate px-6 pt-14 lg:px-8 -z-10"> -->
+    <div class="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
+        <div class="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+
+    <section
+        className="text-white  bg-black font-mont overflow-hidden border border-black shadow-2xl shadow-accent rounded-md mt-5 mx-4 max-w-7xl">
+        <div className="px-5 py-10 mx-auto">
+            <div class="text-pink-600 font-extrabold text-3xl" *ngIf="loading">
+                Loading...
+            </div>
+            <!-- <div *ngIf="!loading" className="mx-auto d-flex flex-row">
+                <img alt="ecommerce" className="lg:w-1/3 w-full h-96 object-contain object-center z-40"
+                    [src]="product.image" />
+                <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-2 lg:mt-0">
+                    <div className="flex items-center justify-between border-b">
+                        <h1 className="text-white text-3xl font-bold mb-0">{{product.title}}</h1>
+                        <p className="flex text-3xl font-bold items-center">
+                            {{product.rating.rate}}
+                        </p>
+                    </div>
+                    <p className="leading-relaxed border-b mb-5 pb-5 text-xl">
+                        {{product.description}}
+                    </p>
+
+                    <div className="flex">
+                        <span className="title-font font-bold text-2xl text-accent">
+                            ₹{{product.price}}
+                        </span>
+                        <button className="ml-auto font-sans border-white border rounded-md px-3 py-1 text-xl z-40">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
+            </div> -->
+            <div *ngIf="!loading">
+
+            </div>
+        </div>
+    </section>
+
+    <div class=" absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl
+                    sm:top-[calc(100%-30rem)]" aria-hidden="true">
+        <div class="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]"
+            style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)">
+        </div>
+    </div>
+    <!-- </div> -->
+</div>
