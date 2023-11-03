@@ -6,38 +6,72 @@
         </div>
     </div>
 
-    <section
-        className="text-white  bg-black font-mont overflow-hidden border border-black shadow-2xl shadow-accent rounded-md mt-5 mx-4 max-w-7xl">
-        <div className="px-5 py-10 mx-auto">
-            <div class="text-pink-600 font-extrabold text-3xl" *ngIf="loading">
+    <!-- <section
+        class="text-white bg-black font-mont overflow-hidden border border-black shadow-2xl shadow-accent rounded-md mt-5 mx-4 max-w-7xl">
+        <div class="px-5 py-10 mx-auto">
+            <div class="font-extrabold text-3xl" *ngIf="loading">
                 Loading...
             </div>
-            <!-- <div *ngIf="!loading" className="mx-auto d-flex flex-row">
-                <img alt="ecommerce" className="lg:w-1/3 w-full h-96 object-contain object-center z-40"
+            <div *ngIf="!loading" class="mx-auto d-flex flex-row flex-wrap justify-content-around align-items-center ">
+                <img alt="ecommerce" class="lg:w-1/3 w-full h-96 object-contain object-center z-40 rounded-sm"
                     [src]="product.image" />
-                <div className="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-2 lg:mt-0">
-                    <div className="flex items-center justify-between border-b">
-                        <h1 className="text-white text-3xl font-bold mb-0">{{product.title}}</h1>
-                        <p className="flex text-3xl font-bold items-center">
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-2 lg:mt-0">
+                    <div class="flex items-center justify-between border-b">
+                        <h1 class="text-white text-3xl font-bold mb-0">{{product.title}}</h1>
+                        <p class="flex text-3xl font-bold items-center">
                             {{product.rating.rate}}
                         </p>
                     </div>
-                    <p className="leading-relaxed border-b mb-5 pb-5 text-xl">
+                    <p class="leading-relaxed border-b mb-5 pb-5 text-xl">
                         {{product.description}}
                     </p>
 
-                    <div className="flex">
-                        <span className="title-font font-bold text-2xl text-accent">
+                    <div class="flex">
+                        <span class="title-font font-bold text-2xl text-accent">
                             ₹{{product.price}}
                         </span>
-                        <button className="ml-auto font-sans border-white border rounded-md px-3 py-1 text-xl z-40">
+                        <button class="ml-auto font-sans border-white border rounded-md px-3 py-1 text-xl z-40">
                             Add To Cart
                         </button>
                     </div>
                 </div>
-            </div> -->
-            <div *ngIf="!loading">
+            </div>
+        </div>
+    </section> -->
 
+    <section
+        class="text-white bg-black font-mont overflow-hidden border border-black shadow-2xl shadow-accent rounded-md mx-4 max-w-7xl">
+        <div class="px-2 py-3 mx-auto">
+
+            <!-- loading -->
+            <div class="font-extrabold text-3xl" *ngIf="loading">
+                Loading...
+            </div>
+
+            <div *ngIf="!loading" class="mx-auto flex justify-around items-center flex-wrap">
+                <img alt="ecommerce" class="lg:w-1/3 w-full h-96 object-contain object-center z-40"
+                    [src]="product.image" />
+                <div class="lg:w-1/2 w-full lg:pl-10 lg:py-6 mt-2 lg:mt-0">
+                    <div class="items-center justify-between border-b text-xl">
+                        <h1 class="text-white  font-bold mb-0">{{product.title}}</h1>
+                        <p class=" font-bold items-center text-pink-600">
+                            Rating:
+                            {{product.rating.rate}}
+                        </p>
+                    </div>
+                    <p class="leading-relaxed border-b py-2 text-xl">
+                        {{product.description}}
+                    </p>
+
+                    <div class="flex mt-3">
+                        <span class="title-font font-bold text-2xl">
+                            ₹{{product.price}}
+                        </span>
+                        <button class="ml-auto font-sans border-white border rounded-md px-3 py-1 text-xl z-40">
+                            Add To Cart
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

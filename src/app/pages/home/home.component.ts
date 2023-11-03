@@ -7,19 +7,21 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
   productList: any[] = [];
+  loading: boolean = false;
 
   async ngOnInit(): Promise<void> {
     await this.loadAllProducts();
   }
 
   async loadAllProducts() {
+    this.loading = true;
     const data = await fetch('https://fakestoreapi.com/products').then(
       (res) => {
         return res.json();
       }
     );
     this.productList = data;
-    console.log(data);
+    this.loading = false;
   }
 
   addItemToCart(id: number) {
