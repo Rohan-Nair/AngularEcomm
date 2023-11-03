@@ -34,12 +34,15 @@ export class CartComponent {
     this.loading = true;
     this.myCartTotalCost = 0;
     this.myCart = [];
-    // getting all the products in the cart from the localStorage
-    for (let i: number = 1; i < localStorage.length + 1; i++) {
-      const eachProduct = JSON.parse(localStorage[i]);
-      this.myCart.push(eachProduct);
-      //calculating the price when itera.. throu the items
-      this.myCartTotalCost += eachProduct.price * eachProduct.quantity;
+
+    const localeStoragekeys = Object.keys(localStorage);
+    for (let i = 1; i < localeStoragekeys.length; i++) {
+      const theprod = localStorage.getItem(localeStoragekeys[i]);
+      if (theprod) {
+        const eachProduct = JSON.parse(theprod);
+        this.myCart.push(eachProduct);
+        this.myCartTotalCost += eachProduct.price * eachProduct.quantity;
+      }
     }
     this.loading = false;
   }
