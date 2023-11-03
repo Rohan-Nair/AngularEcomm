@@ -36,7 +36,7 @@ export class CartComponent {
     this.myCart = [];
 
     const localeStoragekeys = Object.keys(localStorage);
-    for (let i = 1; i < localeStoragekeys.length; i++) {
+    for (let i = 0; i < localeStoragekeys.length; i++) {
       const theprod = localStorage.getItem(localeStoragekeys[i]);
       if (theprod) {
         const eachProduct = JSON.parse(theprod);
