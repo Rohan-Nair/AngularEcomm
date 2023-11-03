@@ -59,4 +59,31 @@ export class ProductComponent {
     this.product = data;
     this.loading = false;
   }
+
+  addtoCart(prod: productType) {
+    const isPresent = localStorage.getItem(prod.id.toString());
+
+    if (isPresent) {
+      const thisProd = JSON.parse(isPresent);
+
+      var updatedQuantity = {
+        ...thisProd,
+        quantity: thisProd.quantity + 1,
+      };
+
+      localStorage.setItem(
+        JSON.stringify(prod.id),
+        JSON.stringify(updatedQuantity)
+      );
+    } else {
+      var updatedProduct = {
+        ...prod,
+        quantity: 1,
+      };
+      localStorage.setItem(
+        JSON.stringify(prod.id),
+        JSON.stringify(updatedProduct)
+      );
+    }
+  }
 }
