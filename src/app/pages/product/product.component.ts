@@ -51,11 +51,11 @@ export class ProductComponent {
   async getThisProduct() {
     this.loading = true;
     const newid = this.route.snapshot.paramMap.get('id');
-    const data = await fetch(`http://localhost:3000/products/${newid}`).then(
-      (res) => {
-        return res.json();
-      }
-    );
+    const data = await fetch(
+      `https://vast-erin-pigeon-wig.cyclic.app/products/${newid}`
+    ).then((res) => {
+      return res.json();
+    });
     this.product = data;
     this.loading = false;
   }

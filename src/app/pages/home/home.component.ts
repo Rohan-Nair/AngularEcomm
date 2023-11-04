@@ -15,7 +15,9 @@ export class HomeComponent {
 
   async loadAllProducts() {
     this.loading = true;
-    const data = await fetch('http://localhost:3000/products').then((res) => {
+    const data = await fetch(
+      'https://vast-erin-pigeon-wig.cyclic.app/products'
+    ).then((res) => {
       return res.json();
     });
     this.productList = data;
