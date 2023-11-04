@@ -15,11 +15,9 @@ export class HomeComponent {
 
   async loadAllProducts() {
     this.loading = true;
-    const data = await fetch('https://fakestoreapi.com/products').then(
-      (res) => {
-        return res.json();
-      }
-    );
+    const data = await fetch('http://localhost:3000/products').then((res) => {
+      return res.json();
+    });
     this.productList = data;
     this.loading = false;
   }

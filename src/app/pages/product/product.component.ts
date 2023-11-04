@@ -51,7 +51,7 @@ export class ProductComponent {
   async getThisProduct() {
     this.loading = true;
     const newid = this.route.snapshot.paramMap.get('id');
-    const data = await fetch(`https://fakestoreapi.com/products/${newid}`).then(
+    const data = await fetch(`http://localhost:3000/products/${newid}`).then(
       (res) => {
         return res.json();
       }

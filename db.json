@@ -1,0 +1,51 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Think Big - Lipstick",
+      "price": 120,
+      "description": "Paint the Town Red with our new shade Think Big!! 💄✨✨ Checkout our website to place order and view more such products.",
+      "category": "lipstick",
+      "image": "https://media.thebodyshop.in/media/catalog/product/1/0/1017387_1.jpg",
+      "rating": {
+        "rate": 4.5,
+        "count": 120
+      }
+    },
+    {
+      "id": 2,
+      "title": "Live Loud - Lipstick",
+      "price": 99,
+      "description": "Get the perfect berry lip with our Live Loud lipstick. 💄💋",
+      "category": "lipstick",
+      "image": "https://media.thebodyshop.in/media/catalog/product/1/0/1017383_1.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 80
+      }
+    },
+    {
+      "id": 3,
+      "title": "Life's Peachy - Lipstick",
+      "price": 99,
+      "description": "Achieve a natural peach look with our Life's Peachy lipstick. 💄💄",
+      "category": "lipstick",
+      "image": "https://media.thebodyshop.in/media/catalog/product/1/0/1017368_1.jpg",
+      "rating": {
+        "rate": 4.2,
+        "count": 80
+      }
+    },
+    {
+      "id": 4,
+      "title": "MARS - EyeShadow",
+      "price": 99,
+      "description": "Create stunning eye looks with our MARS eyeshadow palette. 👁️✨",
+      "image": "https://images-static.nykaa.com/media/catalog/product/a/5/a58e85cMARSX00000116_1.jpg?tr=w-344,h-344,cm-pad_resize",
+      "rating": {
+        "rate": 4.2,
+        "count": 80
+      }
+    }
+  ]
+}
