@@ -16,7 +16,7 @@ export class HomeComponent {
   async loadAllProducts() {
     this.loading = true;
     const data = await fetch(
-      'https://vast-erin-pigeon-wig.cyclic.app/products'
+      'https://glamora-backend.vercel.app/products'
     ).then((res) => {
       return res.json();
     });

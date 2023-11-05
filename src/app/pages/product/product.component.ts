@@ -44,7 +44,7 @@ export class ProductComponent {
     this.loading = true;
     const newid = this.route.snapshot.paramMap.get('id');
     const data = await fetch(
-      `https://vast-erin-pigeon-wig.cyclic.app/products/${newid}`
+      `https://glamora-backend.vercel.app/products/${newid}`
     ).then((res) => {
       return res.json();
     });
