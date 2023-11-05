@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 interface productType {
   id: number;
@@ -20,6 +21,8 @@ interface productType {
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent {
+  constructor(private toastr: ToastrService) {}
+
   loading: boolean = false;
   myCart: productType[] = [];
   myCartTotalCost: number = 0;
@@ -63,5 +66,6 @@ export class CartComponent {
         this.getCartProds();
       }
     }
+    this.toastr.success('Removed One Product');
   }
 }

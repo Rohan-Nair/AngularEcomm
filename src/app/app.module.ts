@@ -6,10 +6,26 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { ProductComponent } from './pages/product/product.component';
 import { CartComponent } from './pages/cart/cart.component';
+import { ToastrModule } from 'ngx-toastr';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ContactComponent } from './pages/contact/contact.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, ProductComponent, CartComponent],
-  imports: [BrowserModule, AppRoutingModule],
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ProductComponent,
+    CartComponent,
+    ContactComponent,
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ToastrModule.forRoot(),
+    BrowserAnimationsModule,
+    FormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

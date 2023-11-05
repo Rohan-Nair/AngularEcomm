@@ -1,14 +1,6 @@
 import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-// import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
-// @Component({
-//   selector: 'progress-spinner-overview-example',
-//   templateUrl: 'progress-spinner-overview-example.html',
-//   standalone: true,
-//   imports: [MatProgressSpinnerModule],
-// })
-// export class ProgressSpinnerOverviewExample {}
+import { ToastrService } from 'ngx-toastr';
 
 interface productType {
   id: number;
@@ -29,7 +21,7 @@ interface productType {
   styleUrls: ['./product.component.css'],
 })
 export class ProductComponent {
-  constructor(private route: ActivatedRoute) {}
+  constructor(private route: ActivatedRoute, private toastr: ToastrService) {}
   product: productType = {
     id: -1,
     category: '',
@@ -85,5 +77,6 @@ export class ProductComponent {
         JSON.stringify(updatedProduct)
       );
     }
+    this.toastr.success('Added to cart');
   }
 }

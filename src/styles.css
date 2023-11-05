@@ -23,15 +23,3 @@
   background: white;
   border-radius: 5px;
 }
-
-/* * {
-  overflow-x: hidden;
-  ::-webkit-scrollbar {
-    width: 0px;
-  }
-}
-.donthidescroll {
-  ::-webkit-scrollbar {
-    width: 5px;
-  }
-} */

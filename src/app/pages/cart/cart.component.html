@@ -12,7 +12,7 @@
         </div>
     </div>
 
-    <div class="text-white bg-black rounded-md w-full mx-auto max-w-[32rem] text-xl p-3">
+    <div *ngIf="myCart.length !== 0" class="text-white bg-black rounded-md w-full mx-auto max-w-[32rem] text-xl p-3">
         <div class="flex justify-between px-2">
             <p class="mb-1">Total Price</p>
             <p>₹{{myCartTotalCost}}</p>
@@ -37,8 +37,9 @@
 
     <ng-container *ngIf="myCart.length === 0">
         <div class="text-white bg-black rounded-md w-full mx-auto max-w-[32rem] text-xl p-3">
-            <div class="flex justify-between px-2">
-                <p>No Products to show</p>
+            <div class="flex flex-col items-center px-2">
+                <p>Nothing in your cart yet</p>
+                <p routerLink="" class="text-pink-600">Continue Shopping</p>
             </div>
         </div>
     </ng-container>
