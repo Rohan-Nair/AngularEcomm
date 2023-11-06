@@ -15,9 +15,10 @@ export class ContactComponent {
   message: string = '';
 
   onSubmit(e: Event) {
-    console.log('User Name:', this.userName);
-    console.log('User Email:', this.userEmail);
-    console.log('Message:', this.message);
+    if (this.userName === '' || this.userEmail === '' || this.message === '') {
+      this.toastr.error('Please fill in all the fields');
+      return;
+    }
 
     emailjs
       .sendForm(
